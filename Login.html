@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meoww login</title>
+    <style>
+        body
+        {
+            background-color: rgb(255, 214, 248);
+        }
+        #lgnid
+        {
+            position: relative;
+            top : 200px;
+            font-size: 30px;
+            text-align: center;
+        }
+        #pwd
+        {
+            position: relative;
+            top : 220px;
+            font-size: 30px;
+            text-align: center;
+        }
+        #btn
+        {
+            position: relative;
+            top : 250px;
+            text-align: center;
+        }
+        input
+        {
+            font-style: italic;
+            font-size: 30px;
+        }
+        button
+        {
+            font-size: 40px;
+        }
+    </style>
+    <script>
+        function validation()
+        {
+            var id = document.loginform.lid.value;
+            var pwd = document.loginform.pwd.value;
+            if(id == "")
+            {
+                alert("Please enter Login ID");
+            }
+            else if(pwd == "")
+            {
+                alert("Please enter Password");
+            }
+            else if(pwd.length < 6)
+            {
+                alert("Password must be atleast 6 characters");
+            }
+            else
+            {
+                alert("Submitted successfully");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="loginform">
+        <div id="lgnid">
+            Login ID : <input type="text"  name="lid" placeholder="enter your ID">
+        </div>
+        <div id="pwd">
+            Password : <input type="password" name="pwd" placeholder="enter your password">
+        </div>
+        <div id="btn">
+            <button type="button" id="submit" onclick=validation()>Submit</button>
+        </div>
+    </form>
+</body>
+</html>
